@@ -3,11 +3,26 @@
 
 {% block content %}
     <div class="container">
-        <div class="row">
-            <div class="col">
-                <h1 class="text-center my-3">
-                    hola
-                </h1>
+        <div class="row justify-content-center">
+            <div >
+
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <form>
+                    <div class="form-floating my-3">
+                        <textarea class="form-control" placeholder="Insert only the product serial part" id="product-serial"></textarea>
+                        <label for="product-serial">Product serial part</label>
+                    </div>
+                    <div class="form-floating my-3">
+                        <textarea class="form-control" placeholder="Insert the lower serial" id="lower"></textarea>
+                        <label for="lower">Lower serial part</label>
+                    </div>
+                    <div class="form-floating my-3">
+                        <textarea class="form-control" placeholder="Insert the upper serial" id="upper"></textarea>
+                        <label for="upper">Upper serial part</label>
+                    </div>
+                    <a class="btn btn-success rounded-2">Generate</a>
+                </form>
             </div>
         </div>
     </div>
