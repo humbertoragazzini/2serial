@@ -8,20 +8,21 @@
 
             </div>
             <div class="col-sm-12 col-md-6">
-                <form>
+                <form method="GET" action="{% url 'serial_generator' %}">
                     <div class="form-floating my-3">
-                        <textarea class="form-control" placeholder="Insert only the product serial part" id="product-serial"></textarea>
+                        <textarea class="form-control" name="product_serial" placeholder="Insert only the product serial part" id="product-serial"></textarea>
                         <label for="product-serial">Product serial part</label>
                     </div>
                     <div class="form-floating my-3">
-                        <textarea class="form-control" placeholder="Insert the lower serial" id="lower"></textarea>
+                        <textarea class="form-control" name="lower_number" placeholder="Insert the lower serial" id="lower"></textarea>
                         <label for="lower">Lower serial part</label>
                     </div>
                     <div class="form-floating my-3">
-                        <textarea class="form-control" placeholder="Insert the upper serial" id="upper"></textarea>
+                        <textarea class="form-control" name="upper_number" placeholder="Insert the upper serial" id="upper"></textarea>
                         <label for="upper">Upper serial part</label>
                     </div>
-                    <a class="btn btn-success rounded-2">Generate</a>
+                    <button type="submit" class="btn btn-success rounded-2">Generate</button>
+                    <h1>{{cache}}</h1>
                 </form>
             </div>
         </div>
